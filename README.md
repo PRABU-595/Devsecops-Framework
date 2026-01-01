@@ -447,14 +447,6 @@ See [LICENSE](LICENSE) for full details.
 - **Dr. Divya** - Assistant Professor, SRM Institute of Science and Technology
 - **Dr. Vijayalakshmi** - Assistant Professor, SRM Institute of Science and Technology
 
-**Institution:**  
-Department of Networking and Communications  
-SRM Institute of Science and Technology  
-Chennai, India
-
-**Repository:** https://github.com/PRABU-595/Devsecops-Framework  
-**Issues:** https://github.com/PRABU-595/Devsecops-Framework/issues
-
 ---
 
 ## Appendix: Quick Start Guide
