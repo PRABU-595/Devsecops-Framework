@@ -1,0 +1,41 @@
+# Production Framework Dependencies
+# Kubernetes DevSecOps Framework - Core Requirements
+
+# Core ML/AI
+numpy>=1.24.0
+pandas>=2.0.0
+scikit-learn>=1.3.0
+
+# Kubernetes
+kubernetes>=25.0.0
+pyyaml>=6.0
+
+# Graph & Optimization
+networkx>=3.0
+scipy>=1.10.0
+
+# API & Web
+fastapi>=0.100.0
+uvicorn>=0.23.0
+pydantic>=2.0.0
+
+# HTTP & Security
+requests>=2.31.0
+cryptography>=41.0.0
+
+# Async
+aiohttp>=3.8.0
+asyncio-mqtt>=0.16.0
+
+# Logging & Monitoring
+python-json-logger>=2.0.0
+prometheus-client>=0.17.0
+
+# Testing (Development)
+pytest>=7.4.0
+pytest-asyncio>=0.21.0
+pytest-cov>=4.1.0
+
+# Optional: Image Scanning
+# trivy>=0.40.0  # Uncomment for CVE scanning
+# grype>=0.60.0  # Alternative image scanner

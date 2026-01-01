@@ -1,0 +1,21 @@
+apiVersion: templates.gatekeeper.sh/v1beta1
+kind: ConstraintTemplate
+metadata:
+  name: k8sblockprivilegeescalation
+  annotations:
+    description: "Blocks allowPrivilegeEscalation flag"
+spec:
+  crd:
+    spec:
+      names:
+        kind: K8sBlockPrivilegeEscalation
+  targets:
+    - target: admission.k8s.gatekeeper.sh
+      rego: |
+        package k8sblockprivilegeescalation
+        
+        violation[{"msg": msg}] {
+          container := input.review.object.spec.containers[_]
+          container.securityContext.allowPrivilegeEscalation == true
+          msg := sprintf("allowPrivilegeEscalation is not allowed: %v", [container.name])
+        }

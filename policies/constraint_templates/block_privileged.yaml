@@ -1,0 +1,42 @@
+apiVersion: templates.gatekeeper.sh/v1beta1
+kind: ConstraintTemplate
+metadata:
+  name: k8sblockprivileged
+  annotations:
+    description: "Blocks privileged containers (MITRE ATT&CK T1068 - Privilege Escalation)"
+spec:
+  crd:
+    spec:
+      names:
+        kind: K8sBlockPrivileged
+      validation:
+        openAPIV3Schema:
+          type: object
+          properties:
+            exemptImages:
+              type: array
+              items:
+                type: string
+  targets:
+    - target: admission.k8s.gatekeeper.sh
+      rego: |
+        package k8sblockprivileged
+        
+        violation[{"msg": msg}] {
+          container := input.review.object.spec.containers[_]
+          container.securityContext.privileged
+          not exempt_image(container.image)
+          msg := sprintf("Privileged container is not allowed: %v", [container.name])
+        }
+        
+        violation[{"msg": msg}] {
+          container := input.review.object.spec.initContainers[_]
+          container.securityContext.privileged
+          not exempt_image(container.image)
+          msg := sprintf("Privileged init container is not allowed: %v", [container.name])
+        }
+        
+        exempt_image(image) {
+          exempt := input.parameters.exemptImages[_]
+          startswith(image, exempt)
+        }

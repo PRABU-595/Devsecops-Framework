@@ -1,0 +1,5 @@
+component,cpu_millicores,memory_mib,pods
+OPA Gatekeeper,45,128,3
+Trivy Operator,38,256,1
+Falco,52,384,3
+ArgoCD,85,512,5

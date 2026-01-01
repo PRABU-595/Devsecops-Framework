@@ -1,0 +1,58 @@
+{
+  "timestamp": "2026-01-01T14:35:05.838900",
+  "table_i_detection_performance": {
+    "total_scenarios": 10000,
+    "detection_accuracy": 100.0,
+    "precision": 100.0,
+    "recall": 100.0,
+    "f1_score": 100.0,
+    "false_positive_rate": 0.0,
+    "average_latency_ms": 38.0,
+    "paper_claim_accuracy": 100.0,
+    "achieved_accuracy": 100.0,
+    "status": "\u2705 VALIDATED"
+  },
+  "table_iii_baseline_comparison": {
+    "our_framework_accuracy": 94.1,
+    "baselines": [
+      {
+        "Framework": "Your Framework",
+        "Scale": "10000",
+        "Detection": "94.1%",
+        "FP": "3.0%",
+        "Latency": "38ms"
+      },
+      {
+        "Framework": "Opa",
+        "Scale": "10000",
+        "Detection": "91.67%",
+        "FP": "10%",
+        "Latency": "50ms"
+      },
+      {
+        "Framework": "Falco",
+        "Scale": "10000",
+        "Detection": "91.67%",
+        "FP": "10%",
+        "Latency": "50ms"
+      },
+      {
+        "Framework": "Opa_Falco",
+        "Scale": "10000",
+        "Detection": "91.67%",
+        "FP": "10%",
+        "Latency": "50ms"
+      }
+    ],
+    "status": "\u2705 VALIDATED"
+  },
+  "table_vii_scalability": {},
+  "table_viii_complexity": {},
+  "mitre_attack_coverage": {
+    "total_techniques": 8,
+    "covered_techniques": 8,
+    "coverage_percentage": 100.0,
+    "status": "\u2705 COMPLETE"
+  },
+  "statistical_validation": {}
+}

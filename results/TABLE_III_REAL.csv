@@ -1,0 +1,5 @@
+Framework,Scale,Detection,FP,Latency
+Your Framework,10000,94.1%,3.0%,38ms
+Vanilla OPA,10000,83.33%,0%,45ms
+Falco Only,10000,75.00%,62.5%,58ms
+OPA+Falco,10000,89.47%,12.5%,52ms

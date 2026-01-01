@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: malicious-no-limits
+spec:
+  containers:
+  - name: cryptominer
+    image: alpine:3.19
+    command: ["sh", "-c", "while true; do echo mining; done"]
+    # NO resource limits - can consume all node resources

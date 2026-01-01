@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: malicious-hostnetwork
+spec:
+  hostNetwork: true
+  containers:
+  - name: attacker
+    image: alpine:3.19

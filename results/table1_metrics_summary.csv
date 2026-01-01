@@ -1,0 +1,12 @@
+Metric,Value
+Policy Enforcement Accuracy (%),91.67
+Policy Enforcement Precision (%),88.89
+Policy Enforcement Recall (%),100.00
+Vulnerability Detection Rate (%),91.67
+Runtime Detection Accuracy (%),100.00
+Runtime Detection Precision (%),100.00
+Runtime Detection Recall (%),100.00
+Runtime Detection F1-Score (%),100.00
+Overall Security Improvement (%),50.75
+Total Resource Overhead CPU (m),220
+Total Resource Overhead Memory (MiB),1280

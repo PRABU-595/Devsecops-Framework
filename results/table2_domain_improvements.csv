@@ -1,0 +1,6 @@
+Security Domain,Baseline (%),Unified Framework (%),Improvement (%)
+Policy Enforcement (OPA),65.0,91.7,41.0
+Vulnerability Detection (Trivy),70.0,91.7,31.0
+Runtime Protection (AI+Falco),55.0,100.0,81.8
+CI/CD Security (ArgoCD),60.0,95.0,58.3
+IAM Security (Policy-Driven),62.0,92.0,48.4

@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: malicious-root-user
+spec:
+  containers:
+  - name: attacker
+    image: alpine:3.19
+    securityContext:
+      runAsUser: 0

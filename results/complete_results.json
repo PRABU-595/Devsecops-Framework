@@ -1,0 +1,389 @@
+{
+  "timestamp": "2025-12-31T13:07:23.260835",
+  "framework_version": "1.0",
+  "components": {
+    "opa_gatekeeper": "v3.14.0",
+    "trivy": "v0.48.0",
+    "falco": "v0.36.0",
+    "argocd": "v2.9.0"
+  },
+  "policy_enforcement": {
+    "total_scenarios": 12,
+    "attack_scenarios": 8,
+    "legitimate_scenarios": 4,
+    "accuracy": 91.66666666666666,
+    "precision": 88.88888888888889,
+    "recall": 100.0,
+    "f1_score": 94.11764705882352,
+    "true_positives": 8,
+    "false_positives": 1,
+    "true_negatives": 3,
+    "false_negatives": 0,
+    "scenarios_tested": [
+      {
+        "scenario": "Privileged Container",
+        "mitre_attack_id": "T1611",
+        "expected": "BLOCK",
+        "actual": "BLOCK",
+        "correct": true
+      },
+      {
+        "scenario": "Missing Resource Limits",
+        "mitre_attack_id": "T1496",
+        "expected": "BLOCK",
+        "actual": "BLOCK",
+        "correct": true
+      },
+      {
+        "scenario": "Untrusted Registry",
+        "mitre_attack_id": "T1195.002",
+        "expected": "BLOCK",
+        "actual": "BLOCK",
+        "correct": true
+      },
+      {
+        "scenario": "Host Path Mount",
+        "mitre_attack_id": "T1611",
+        "expected": "BLOCK",
+        "actual": "BLOCK",
+        "correct": true
+      },
+      {
+        "scenario": "Capabilities Addition",
+        "mitre_attack_id": "T1611",
+        "expected": "BLOCK",
+        "actual": "BLOCK",
+        "correct": true
+      },
+      {
+        "scenario": "RunAsRoot Enabled",
+        "mitre_attack_id": "T1611",
+        "expected": "BLOCK",
+        "actual": "BLOCK",
+        "correct": true
+      },
+      {
+        "scenario": "Missing Network Policy",
+        "mitre_attack_id": "T1021",
+        "expected": "BLOCK",
+        "actual": "BLOCK",
+        "correct": true
+      },
+      {
+        "scenario": "Insecure Service Account",
+        "mitre_attack_id": "T1078",
+        "expected": "BLOCK",
+        "actual": "BLOCK",
+        "correct": true
+      },
+      {
+        "scenario": "Standard Nginx Deploy",
+        "mitre_attack_id": null,
+        "expected": "ALLOW",
+        "actual": "ALLOW",
+        "correct": true
+      },
+      {
+        "scenario": "Microservice App",
+        "mitre_attack_id": null,
+        "expected": "ALLOW",
+        "actual": "ALLOW",
+        "correct": true
+      },
+      {
+        "scenario": "Batch Job",
+        "mitre_attack_id": null,
+        "expected": "ALLOW",
+        "actual": "BLOCK",
+        "correct": false
+      },
+      {
+        "scenario": "StatefulSet DB",
+        "mitre_attack_id": null,
+        "expected": "ALLOW",
+        "actual": "ALLOW",
+        "correct": true
+      }
+    ]
+  },
+  "vulnerability_scanning": {
+    "images_scanned": 12,
+    "images_with_vulnerabilities": 11,
+    "detection_rate": 91.66666666666666,
+    "avg_critical_per_image": 2.1666666666666665,
+    "avg_high_per_image": 7.166666666666667,
+    "avg_total_vulnerabilities": 22.166666666666668,
+    "total_critical_found": 26,
+    "total_high_found": 86,
+    "scan_results": [
+      {
+        "image": "nginx:1.25-alpine",
+        "critical": 0,
+        "high": 1,
+        "medium": 2,
+        "total": 3,
+        "risk_score": 7
+      },
+      {
+        "image": "nginx:1.19",
+        "critical": 2,
+        "high": 7,
+        "medium": 13,
+        "total": 22,
+        "risk_score": 68
+      },
+      {
+        "image": "ubuntu:22.04",
+        "critical": 0,
+        "high": 2,
+        "medium": 7,
+        "total": 9,
+        "risk_score": 17
+      },
+      {
+        "image": "ubuntu:18.04",
+        "critical": 5,
+        "high": 17,
+        "medium": 30,
+        "total": 52,
+        "risk_score": 165
+      },
+      {
+        "image": "python:3.11-slim",
+        "critical": 0,
+        "high": 2,
+        "medium": 3,
+        "total": 5,
+        "risk_score": 13
+      },
+      {
+        "image": "python:3.7",
+        "critical": 3,
+        "high": 13,
+        "medium": 21,
+        "total": 37,
+        "risk_score": 116
+      },
+      {
+        "image": "node:20-alpine",
+        "critical": 0,
+        "high": 1,
+        "medium": 3,
+        "total": 4,
+        "risk_score": 8
+      },
+      {
+        "image": "node:14",
+        "critical": 4,
+        "high": 14,
+        "medium": 28,
+        "total": 46,
+        "risk_score": 138
+      },
+      {
+        "image": "redis:7-alpine",
+        "critical": 0,
+        "high": 2,
+        "medium": 5,
+        "total": 7,
+        "risk_score": 15
+      },
+      {
+        "image": "postgres:15",
+        "critical": 0,
+        "high": 4,
+        "medium": 6,
+        "total": 10,
+        "risk_score": 26
+      },
+      {
+        "image": "log4shell-app:vulnerable",
+        "critical": 12,
+        "high": 23,
+        "medium": 36,
+        "total": 71,
+        "risk_score": 271
+      },
+      {
+        "image": "alpine:latest",
+        "critical": 0,
+        "high": 0,
+        "medium": 0,
+        "total": 0,
+        "risk_score": 0
+      }
+    ]
+  },
+  "ai_training": {
+    "training_samples": 10000,
+    "test_accuracy_rf": 100.0,
+    "test_accuracy_gb": 100.0,
+    "cv_accuracy_rf_mean": 100.0,
+    "cv_accuracy_rf_std": 0.0,
+    "cv_accuracy_gb_mean": 100.0,
+    "cv_accuracy_gb_std": 0.0
+  },
+  "runtime_detection": {
+    "test_scenarios": 12,
+    "accuracy": 100.0,
+    "precision": 100.0,
+    "recall": 100.0,
+    "f1_score": 100.0,
+    "true_positives": 6,
+    "false_positives": 0,
+    "true_negatives": 6,
+    "false_negatives": 0,
+    "avg_confidence": 49.9992218765951,
+    "predictions": [
+      {
+        "description": "Normal Web Server",
+        "actual": "normal",
+        "predicted": "normal",
+        "confidence": 0.00022578489915699084,
+        "correct": true
+      },
+      {
+        "description": "Idle Microservice",
+        "actual": "normal",
+        "predicted": "normal",
+        "confidence": 0.00022578489915699084,
+        "correct": true
+      },
+      {
+        "description": "Batch Processing",
+        "actual": "normal",
+        "predicted": "normal",
+        "confidence": 0.00022578489915699084,
+        "correct": true
+      },
+      {
+        "description": "Database Query",
+        "actual": "normal",
+        "predicted": "normal",
+        "confidence": 0.00022578489915699084,
+        "correct": true
+      },
+      {
+        "description": "API Gateway",
+        "actual": "normal",
+        "predicted": "normal",
+        "confidence": 0.00022578489915699084,
+        "correct": true
+      },
+      {
+        "description": "Cache Server",
+        "actual": "normal",
+        "predicted": "normal",
+        "confidence": 0.00022578489915699084,
+        "correct": true
+      },
+      {
+        "description": "Cryptomining Malware (T1496)",
+        "actual": "attack",
+        "predicted": "attack",
+        "confidence": 99.99821796829104,
+        "correct": true
+      },
+      {
+        "description": "Container Escape Attempt (T1611)",
+        "actual": "attack",
+        "predicted": "attack",
+        "confidence": 99.99821796829104,
+        "correct": true
+      },
+      {
+        "description": "Privilege Escalation (T1068)",
+        "actual": "attack",
+        "predicted": "attack",
+        "confidence": 99.99821796829104,
+        "correct": true
+      },
+      {
+        "description": "Lateral Movement (T1021)",
+        "actual": "attack",
+        "predicted": "attack",
+        "confidence": 99.99821796829104,
+        "correct": true
+      },
+      {
+        "description": "Data Exfiltration (T1041)",
+        "actual": "attack",
+        "predicted": "attack",
+        "confidence": 99.99821796829104,
+        "correct": true
+      },
+      {
+        "description": "Backdoor Installation (T1543)",
+        "actual": "attack",
+        "predicted": "attack",
+        "confidence": 99.99821796829104,
+        "correct": true
+      }
+    ]
+  },
+  "resource_overhead": {
+    "components": [
+      {
+        "component": "OPA Gatekeeper",
+        "cpu_millicores": 45,
+        "memory_mib": 128,
+        "pods": 3
+      },
+      {
+        "component": "Trivy Operator",
+        "cpu_millicores": 38,
+        "memory_mib": 256,
+        "pods": 1
+      },
+      {
+        "component": "Falco",
+        "cpu_millicores": 52,
+        "memory_mib": 384,
+        "pods": 3
+      },
+      {
+        "component": "ArgoCD",
+        "cpu_millicores": 85,
+        "memory_mib": 512,
+        "pods": 5
+      }
+    ],
+    "total_cpu_millicores": 220,
+    "total_memory_mib": 1280,
+    "total_pods": 12,
+    "cpu_overhead_percentage": 5.5,
+    "memory_overhead_percentage": 7.8125
+  },
+  "overall_improvement": {
+    "baseline_average": 62.4,
+    "framework_average": 94.06666666666666,
+    "overall_improvement_percentage": 50.74786324786324,
+    "domain_improvements": {
+      "Policy Enforcement (OPA)": {
+        "baseline": 65.0,
+        "framework": 91.66666666666666,
+        "improvement_percentage": 41.025641025641015
+      },
+      "Vulnerability Detection (Trivy)": {
+        "baseline": 70.0,
+        "framework": 91.66666666666666,
+        "improvement_percentage": 30.95238095238094
+      },
+      "Runtime Protection (AI+Falco)": {
+        "baseline": 55.0,
+        "framework": 100.0,
+        "improvement_percentage": 81.81818181818183
+      },
+      "CI/CD Security (ArgoCD)": {
+        "baseline": 60.0,
+        "framework": 95.0,
+        "improvement_percentage": 58.333333333333336
+      },
+      "IAM Security (Policy-Driven)": {
+        "baseline": 62.0,
+        "framework": 92.0,
+        "improvement_percentage": 48.38709677419355
+      }
+    }
+  }
+}

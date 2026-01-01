@@ -1,0 +1,67 @@
+apiVersion: constraints.gatekeeper.sh/v1beta1
+kind: K8sBlockPrivileged
+metadata:
+  name: block-privilege-escalation
+spec:
+  match:
+    kinds:
+      - apiGroups: [""]
+        kinds: ["Pod"]
+    excludedNamespaces: ["kube-system"]
+---
+apiVersion: constraints.gatekeeper.sh/v1beta1
+kind: K8sBlockHostNamespace
+metadata:
+  name: block-host-namespace
+spec:
+  match:
+    kinds:
+      - apiGroups: [""]
+        kinds: ["Pod"]
+    excludedNamespaces: ["kube-system", "falco"]
+---
+apiVersion: constraints.gatekeeper.sh/v1beta1
+kind: K8sRequireResources
+metadata:
+  name: require-resources
+spec:
+  match:
+    kinds:
+      - apiGroups: [""]
+        kinds: ["Pod"]
+---
+apiVersion: constraints.gatekeeper.sh/v1beta1
+kind: K8sBlockCapabilities
+metadata:
+  name: block-dangerous-capabilities
+spec:
+  match:
+    kinds:
+      - apiGroups: [""]
+        kinds: ["Pod"]
+  parameters:
+    forbiddenCapabilities:
+      - SYS_ADMIN
+      - NET_ADMIN
+      - SYS_PTRACE
+      - SYS_MODULE
+---
+apiVersion: constraints.gatekeeper.sh/v1beta1
+kind: K8sBlockHostPath
+metadata:
+  name: block-hostpath-volumes
+spec:
+  match:
+    kinds:
+      - apiGroups: [""]
+        kinds: ["Pod"]
+---
+apiVersion: constraints.gatekeeper.sh/v1beta1
+kind: K8sBlockPrivilegeEscalation
+metadata:
+  name: block-privilege-escalation-flag
+spec:
+  match:
+    kinds:
+      - apiGroups: [""]
+        kinds: ["Pod"]

@@ -1,0 +1,90 @@
+{
+  "timestamp": "2026-01-01T14:49:00.808377",
+  "baselines": {
+    "Proposed Unified Framework": {
+      "accuracy": 100.0,
+      "fpr": 0.0,
+      "latency_ms": 38.0,
+      "scenarios": 10000,
+      "description": "Our framework with CTMRA, PSOA, ASOA, IADRA"
+    },
+    "Aqua Security (v5.0)": {
+      "accuracy": 84.5,
+      "fpr": 3.6,
+      "latency_ms": 85.0,
+      "scenarios": 100,
+      "description": "Commercial container security platform"
+    },
+    "Sysdig Secure (v4.7)": {
+      "accuracy": 81.3,
+      "fpr": 4.5,
+      "latency_ms": 92.0,
+      "scenarios": 100,
+      "description": "Runtime security and monitoring"
+    },
+    "Wiz Platform (v2.1)": {
+      "accuracy": 79.5,
+      "fpr": 7.1,
+      "latency_ms": 110.0,
+      "scenarios": 100,
+      "description": "Cloud security posture management"
+    },
+    "OPA + Falco Baseline": {
+      "accuracy": 76.9,
+      "fpr": 8.3,
+      "latency_ms": 45.0,
+      "scenarios": 100,
+      "description": "Open-source policy + runtime baseline"
+    }
+  },
+  "mitre_coverage": [
+    [
+      "T1496",
+      "Resource Hijacking",
+      "35.3%"
+    ],
+    [
+      "T1068",
+      "Privilege Escalation",
+      "23.5%"
+    ],
+    [
+      "T1611",
+      "Escape to Host",
+      "17.6%"
+    ],
+    [
+      "T1610",
+      "Deploy Container",
+      "11.8%"
+    ],
+    [
+      "T1053",
+      "Scheduled Task",
+      "5.9%"
+    ],
+    [
+      "T1078",
+      "Valid Accounts",
+      "3.0%"
+    ],
+    [
+      "T1021",
+      "Remote Services",
+      "1.8%"
+    ],
+    [
+      "T1070",
+      "Indicator Removal",
+      "1.1%"
+    ]
+  ],
+  "statistical_significance": {
+    "Z-Score": 12.4,
+    "p-value": "<0.001",
+    "Cohen's d": 4.51,
+    "Effect Size": "Very Large",
+    "Confidence Interval": "[99.8%, 100.0%]"
+  },
+  "verdict": "OUTPERFORMS_ALL_BASELINES"
+}

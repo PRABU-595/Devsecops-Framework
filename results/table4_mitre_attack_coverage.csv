@@ -1,0 +1,9 @@
+scenario,mitre_attack_id,expected,actual
+Privileged Container,T1611,BLOCK,BLOCK
+Missing Resource Limits,T1496,BLOCK,BLOCK
+Untrusted Registry,T1195.002,BLOCK,BLOCK
+Host Path Mount,T1611,BLOCK,BLOCK
+Capabilities Addition,T1611,BLOCK,BLOCK
+RunAsRoot Enabled,T1611,BLOCK,BLOCK
+Missing Network Policy,T1021,BLOCK,BLOCK
+Insecure Service Account,T1078,BLOCK,BLOCK

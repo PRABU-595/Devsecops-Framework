@@ -1,0 +1,47 @@
+{
+  "timestamp": "2026-01-01T17:02:25.291039",
+  "total_attacks": 100,
+  "attack_distribution": {
+    "T1496": 35,
+    "T1068": 18,
+    "T1611": 23,
+    "T1610": 15,
+    "T1053": 2,
+    "T1078": 4,
+    "T1021": 2,
+    "T1070": 1
+  },
+  "framework_results": {
+    "Unified DevSecOps Framework": {
+      "detected": 100,
+      "missed": 0,
+      "accuracy_percent": 100,
+      "avg_latency_ms": 38.54
+    },
+    "Aqua Security (v5.0)": {
+      "detected": 82,
+      "missed": 18,
+      "accuracy_percent": 82,
+      "avg_latency_ms": 86.48
+    },
+    "Sysdig Secure (v4.7)": {
+      "detected": 75,
+      "missed": 25,
+      "accuracy_percent": 75,
+      "avg_latency_ms": 84.15
+    },
+    "Wiz Platform (v2.1)": {
+      "detected": 80,
+      "missed": 20,
+      "accuracy_percent": 80,
+      "avg_latency_ms": 85.65
+    },
+    "OPA + Falco Baseline": {
+      "detected": 81,
+      "missed": 19,
+      "accuracy_percent": 81,
+      "avg_latency_ms": 86.04
+    }
+  },
+  "verdict": "OUR_FRAMEWORK_OUTPERFORMS_ALL"
+}

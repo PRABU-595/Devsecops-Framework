@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: malicious-sys-admin
+spec:
+  containers:
+  - name: attacker
+    image: alpine:3.19
+    securityContext:
+      capabilities:
+        add: ["SYS_ADMIN"]
