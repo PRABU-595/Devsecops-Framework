@@ -330,8 +330,8 @@ The framework comprehensively addresses 8 container-specific techniques:
 
 ```bash
 # 1. Clone repository
-git clone https://github.com/yourusername/kubernetes-devsecops-framework
-cd kubernetes-devsecops-framework
+git clone https://github.com/PRABU-595/Devsecops-Framework.git
+cd Devsecops-Framework
 
 # 2. Install dependencies
 chmod +x scripts/install_dependencies.sh
@@ -452,17 +452,8 @@ Department of Networking and Communications
 SRM Institute of Science and Technology  
 Chennai, India
 
-**Repository:** https://github.com/yourusername/kubernetes-devsecops-framework  
-**Issues:** https://github.com/yourusername/kubernetes-devsecops-framework/issues  
-**Documentation:** https://github.com/yourusername/kubernetes-devsecops-framework/docs
-
----
-
-## Acknowledgments
-
-This work was supported by the Department of Networking and Communications at SRM Institute of Science and Technology, Chennai, India.
-
-We acknowledge the Kubernetes, OPA Gatekeeper, and Falco communities for their excellent open-source tools that enabled this research.
+**Repository:** https://github.com/PRABU-595/Devsecops-Framework  
+**Issues:** https://github.com/PRABU-595/Devsecops-Framework/issues
 
 ---
 
