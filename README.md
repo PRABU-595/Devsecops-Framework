@@ -473,7 +473,7 @@ cat results/method1_simulation_results.json
 **Expected Output:**
 - 65+ files present
 - 4 algorithms (~1,500 lines total)
-- 83.3% validation pass rate
+- 100% validation pass rate
 - All tables reproducible
 
 ---
