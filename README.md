@@ -480,5 +480,4 @@ cat results/method1_simulation_results.json
 
 **Last Updated:** January 1, 2026  
 **Version:** 1.0.0  
-**Status:** ✅ Publication Ready  
 **IEEE TCC Submission:** Ready for Review
