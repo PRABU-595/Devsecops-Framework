@@ -1,6 +1,6 @@
 # Unified DevSecOps Framework for Policy-Driven and AI-Augmented Cloud-Native Security
 
-**IEEE Transactions on Cloud Computing (TCC) - Supplementary Material**
+**Supplementary Material**
 
 **Authors:** Prabu, Divya, Vijayalakshmi  
 **Institution:** SRM Institute of Science and Technology, Chennai, India  
