@@ -424,9 +424,6 @@ If you use this framework in your research, please cite:
 @article{prabu2026unified,
   title={A Unified DevSecOps Framework for Policy-Driven and AI-Augmented Cloud-Native Security},
   author={Prabu and Divya and Vijayalakshmi},
-  journal={IEEE Transactions on Cloud Computing},
-  year={2026},
-  publisher={IEEE}
 }
 ```
 
